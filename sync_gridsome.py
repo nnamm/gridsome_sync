@@ -1,4 +1,4 @@
-""" pyftpsyncライブラリを使用し、Gridsomeでビルドしたデータ（dist/）をデプロイ先と同期する """
+""" pyftpsyncライブラリを同期モードで使用し、Gridsomeでビルドしたデータ（dist/）をデプロイ先と同期する """
 
 import configparser
 import logging.handlers
@@ -31,7 +31,8 @@ def sync_gridsome() -> None:
 
     # オプション設定
     # ローカル優先／--deleteオプション有効／指定ディレクトリは同期除外
-    opts = {"resolve": "local", "delete": True, "force": True}
+    # opts = {"resolve": "local", "delete": True, "force": True}
+    opts = {"resolve": "local"}
 
     # 同期の実行
     sync = BiDirSynchronizer(local, remote, opts)
