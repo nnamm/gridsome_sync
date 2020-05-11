@@ -31,7 +31,7 @@ def sync_gridsome() -> None:
 
     # オプション設定
     # ローカル優先／--deleteオプション有効／指定ディレクトリは同期除外
-    opts = {"resolve": "local", "delete": True, "force": True, "exclude": ["_gallery"]}
+    opts = {"resolve": "local", "delete": True, "force": True}
 
     # 同期の実行
     sync = BiDirSynchronizer(local, remote, opts)
