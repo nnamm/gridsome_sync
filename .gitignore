@@ -1,4 +1,6 @@
-venv
-.idea
+venv/
+.idea/
 config.ini
 pyftpsync.log
+.DS_Store
+.mypy_cache/
