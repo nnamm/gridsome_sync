@@ -4,8 +4,8 @@ import configparser
 import logging.handlers
 
 from ftpsync.ftp_target import FtpTarget
-from ftpsync.targets import FsTarget
 from ftpsync.synchronizers import BiDirSynchronizer
+from ftpsync.targets import FsTarget
 from ftpsync.util import set_pyftpsync_logger
 
 
